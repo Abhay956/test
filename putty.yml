@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: putty
+  name: putty
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: putty
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: putty
+    spec:
+      containers:
+      - image: jlesage/putty
+        name: putty

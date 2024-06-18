@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: putty
+  name: putty
+spec:
+  ports:
+  - port: 5800
+    protocol: TCP
+    targetPort: 5800
+  selector:
+    app: putty
+  type: NodePort
